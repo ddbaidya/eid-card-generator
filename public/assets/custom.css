@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Kongshomj";
+    src: url("/assets/fonts/KongshoMJRegular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+html,
+body {
+    font-family: "Kongshomj", sans-serif;
+}
+
+.home {
+    background: url("/images/bg-01.png");
+    background-size: cover;
+}
+.home .star {
+    position: absolute;
+    top: -15vh;
+    width: 50vw;
+    right: 0;
+    z-index: -999;
+}
+
+@media screen and (max-width: 768px) {
+    .home .nimonic {
+        margin-top: 7vh;
+        margin-bottom: 20vh !important;
+    }
+    .home .star {
+        position: absolute;
+        top: 0px;
+        width: 65vw;
+        right: 14px;
+        z-index: -999;
+    }
+}
