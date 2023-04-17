@@ -56,10 +56,18 @@
                         <label class="did-floating-label">ঠিকানা/প্রতিষ্ঠান </label>
                     </div>
                 </div>
+                <div class="mb-3 d-flex justify-content-center">
+                    <div class="did-floating-label-content">
+                        <input class="d-none" type="file" id="profile_photo" onchange="previewImage()">
+                        <label class="border rounded-circle p-3" for="profile_photo" id="image-preview">
+                            <img src="{{ asset('images/icon/profile-photo-icon.png') }}" />
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div>
-                    <h1 class="text-center select-card-btn">কার্ড নির্বাচন করুন</h1>
+                    <h1 class="text-center select-card-btn d-none">কার্ড নির্বাচন করুন</h1>
                 </div>
                 <ul class="card-list p-0">
                     <li>
