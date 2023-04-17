@@ -18,7 +18,15 @@
 
 <body class="preview">
     <div class="container-fluid">
-        
+        <div class="">
+            <img src="{{ asset('images/frame/demo.png') }}" style="width: 95%; display:block; margin: 5% auto;" />
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-around">
+                <button class="btn btn-success d-flex align-items-center"> <img src='{{ asset('images/icon/download-48.png') }}' width="15" class="me-1" /> Download Now</button>
+                <button class="btn btn-primary"><img src='{{ asset('images/icon/fb-48.png') }}' width="15" class="me-1" /> Share On Facebook</button>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets/custom.js') }}"></script>
