@@ -20,7 +20,9 @@ body {
     background: url("/images/bg-01.png");
     background-size: cover;
 }
-
+.w-90{
+    width: 90%;
+}
 .home .star {
     position: absolute;
     top: -15vh;

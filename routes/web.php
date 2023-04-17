@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/cards', [CardController::class, 'index'])->name('card.home');
-Route::get('/preview', [CardController::class, 'preview'])->name('card.preview');
+Route::get('/preview/{card}', [CardController::class, 'preview'])->name('card.preview');
+Route::post('/cards', [CardController::class, 'store'])->name('card.store');
