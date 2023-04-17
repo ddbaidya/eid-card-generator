@@ -68,17 +68,21 @@
             });
         }
 
-        function shareOnFacebook() {
-            // Get the div element
-            const divElement = document.getElementById('final-card');
-            // Use html2canvas to create a canvas element from the div element
-            html2canvas(divElement).then(function(canvas) {
-                // Convert the canvas to a data URL
-                const dataURL = canvas.toDataURL('image/jpeg');
 
-                const ogImageMetaTag = document.getElementById('og-image');
-                ogImageMetaTag.setAttribute('content', dataURL);
-            });
+        // Get the div element
+        const divElement2 = document.getElementById('final-card');
+        // Use html2canvas to create a canvas element from the div element
+        html2canvas(divElement2).then(function(canvas) {
+            // Convert the canvas to a data URL
+            const dataURL = canvas.toDataURL('image/jpeg');
+
+            const ogImageMetaTag = document.getElementById('og-image');
+            ogImageMetaTag.setAttribute('content', dataURL);
+            console.log(divElement2);
+        });
+
+        function shareOnFacebook() {
+
             const url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href);
             window.open(url, '_blank');
         }
