@@ -25,7 +25,7 @@ class CardController extends Controller
      */
     public function preview(Card $card)
     {
-        return view('preview');
+        return view('preview', compact('card'));
     }
 
     /**

@@ -16,11 +16,17 @@
     <title>ঈদ মোবারক </title>
 </head>
 
-<body class="preview d-flex align-items-center" style="height: 100vh">
+<body class="preview d-flex mt-5" style="height: 100vh">
     <div class="container-fluid">
         <div class="row">
+            <div class="col-md-12">
+                <a href="{{ route('home') }}"><img class="logo m-3 m-md-5 m-auto d-block mb-3" src="{{ asset('images/logo.png') }}" width="60" /></a>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12 col-md-6">
-                <img src="{{ asset('images/frame/demo.png') }}" style="width: 95%; display:block; margin: 5% auto;" />
+                <img src="{{ asset('images/frame/frame-0') }}{{ $card->card }}.png" style="width: 95%; display:block; margin: 5% auto;" />
+                <img class="profile-photo" src="{{ $card->profile_photo }}"/>
             </div>
             <div class="col-sm-12 col-md-6 d-flex d-md-block justify-content-around">
                 <button class="btn btn-success d-flex align-items-center"> <img src='{{ asset('images/icon/download-48.png') }}' width="15" class="me-1" /> Download Now</button>

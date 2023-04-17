@@ -13,14 +13,14 @@ body {
 .fs-35px {
     font-size: 35px !important;
 }
-.w-33{
+.w-33 {
     width: 33.3333%;
 }
 .home {
     background: url("/images/bg-01.png");
     background-size: cover;
 }
-.w-90{
+.w-90 {
     width: 90%;
 }
 .home .star {
@@ -274,7 +274,9 @@ body {
     animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
         infinite alternate;
 }
-.next-btn,.next-btn:focus, .next-btn:active {
+.next-btn,
+.next-btn:focus,
+.next-btn:active {
     background-color: #000e14;
     background-image: linear-gradient(to right, #000e14, #023d59, #000e14);
     border: white 3px solid;
@@ -305,4 +307,12 @@ body {
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+}
+
+.preview .profile-photo {
+    position: relative;
+    top: -58%;
+    left: 28%;
+    width: 44%;
+    border-radius: 50%;
 }
