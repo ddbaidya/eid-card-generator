@@ -81,7 +81,7 @@
                 </div>
                 <ul class="card-list p-0 row">
                     <li class="col-6 col-md-4 p-0">
-                        <input type="radio" name="card" id="cb1" value="2" />
+                        <input type="radio" name="card" id="cb1" value="1" />
                         <label for="cb1"><img src="{{ asset('images/frame/frame-1.png') }}" /></label>
                     </li>
                     <li class="col-6 col-md-4 p-0">
