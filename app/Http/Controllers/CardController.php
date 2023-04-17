@@ -15,4 +15,14 @@ class CardController extends Controller
     {
         return view('card');
     }
+
+    /**
+     * Display card preview page.
+     * 
+     * @return \Illuminate\View\View
+     */
+    public function preview()
+    {
+        return view('preview');
+    }
 }
