@@ -50,11 +50,16 @@
         }
 
         function download() {
-            console.log('tigger download');
             // Get the div element
             const divElement = document.getElementById('final-card');
+
+            //including the useCORS option
+            const config = {
+                useCORS: true,
+                // Add any other options you need here
+            };
             // Use html2canvas to create a canvas element from the div element
-            html2canvas(divElement).then(function(canvas) {
+            html2canvas(divElement, config).then(function(canvas) {
                 // Convert the canvas to a data URL
                 const dataURL = canvas.toDataURL('image/jpeg');
 
@@ -81,7 +86,6 @@
             const dataUrl = canvas.toDataURL('image/jpeg', 1.0);
             const ogImage = document.getElementById('og-image');
             ogImage.setAttribute('content', dataUrl);
-            console.log(dataUrl);
         });
 
         function shareOnFacebook() {
