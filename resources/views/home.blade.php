@@ -6,11 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('assets/custom.css') }}" rel="stylesheet">
 
-    <title>ঈদ মোবারক । সানফার্মা</title>
+    <title>ঈদ মোবারক </title>
 </head>
 
 <body class="home">
@@ -25,8 +28,8 @@
                 <img src="{{ asset('images/eid-mubarak-01.png') }}" class="w-75" />
             </div>
             <div class="col-md-6 col-sm-12 text-center">
-                <h1>নতুন সকাল, নতুন দিন <br>শুভ হোক ঈদের দিন</h1>
-                <button class="btn btn-danger mt-2">শুভেচ্ছা কার্ড তৈরী করুন</button>
+                <h1 class="fs-35px">নতুন সকাল, নতুন দিন <br>শুভ হোক ঈদের দিন</h1>
+                <button class="btn btn-danger mt-2 get-start">শুভেচ্ছা কার্ড তৈরী করুন</button>
             </div>
         </div>
         <img src="{{ asset('images/star.png') }}" class="star" />
