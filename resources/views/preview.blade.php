@@ -26,9 +26,14 @@
         <div class="row">
             <div class="col-sm-12 col-md-6">
                 <img src="{{ asset('images/frame/frame-0') }}{{ $card->card }}.png" style="width: 95%; display:block; margin: 5% auto;" />
-                <img class="profile-photo" src="{{ $card->profile_photo }}"/>
+                <img class="profile-photo" src="{{ $card->profile_photo }}" />
             </div>
-            <div class="col-sm-12 col-md-6 d-flex d-md-block justify-content-around">
+            <div class="overly-text w-90">
+                <h3 class="m-0" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->name }}</h3>
+                <h4 class="fs-6" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->designation }}, {{ $card->org }}</h4>
+                <h4 class="mt-5" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
+            </div>
+            <div class="col-sm-12 col-md-6 d-flex d-md-block justify-content-around share-btn">
                 <button class="btn btn-success d-flex align-items-center"> <img src='{{ asset('images/icon/download-48.png') }}' width="15" class="me-1" /> Download Now</button>
                 <button class="btn btn-primary"><img src='{{ asset('images/icon/fb-48.png') }}' width="15" class="me-1" /> Share On Facebook</button>
             </div>

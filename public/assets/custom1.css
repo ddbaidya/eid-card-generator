@@ -316,3 +316,13 @@ body {
     width: 44%;
     border-radius: 50%;
 }
+.preview .overly-text {
+    position: absolute;
+    top: 119vw;
+    text-align: center;
+    left: 6vw;
+}
+.preview .share-btn {
+    position: relative;
+    top: -15vw;
+}
