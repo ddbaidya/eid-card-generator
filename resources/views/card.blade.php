@@ -21,8 +21,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <img class="logo m-3 m-md-5 d-none" src="{{ asset('images/logo.png') }}" width="60" />
-                <img class="logo m-3 m-md-5" src="https://atecglobal-data.com/assets/img/logo/color.png" width="80" />
+                <a href="{{ route('home') }}"><img class="logo m-3 m-md-5" src="{{ asset('images/logo.png') }}" width="60" /></a>
             </div>
         </div>
         <div class="row mt-5">
@@ -67,25 +66,25 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
-                <div>
+                <div class="mt-3">
                     <h1 class="text-center select-card-btn">কার্ড নির্বাচন করুন</h1>
                 </div>
-                <ul class="card-list p-0">
-                    <li>
+                <ul class="card-list p-0 row">
+                    <li class="col-6 col-md-4 p-0">
                         <input type="radio" name="test" id="cb2" />
-                        <label for="cb2"><img src="https://e-cook-production.s3.ap-southeast-1.amazonaws.com/public/images/profile/1676863462.png" /></label>
+                        <label for="cb2"><img src="{{ asset('images/frame/frame-01.png') }}" /></label>
                     </li>
-                    <li>
+                    <li class="col-6 col-md-4 p-0">
                         <input type="radio" name="test" id="cb1" />
-                        <label for="cb1"><img src="https://atecglobal-data.com/assets/img/logo/color.png" /></label>
+                        <label for="cb1"><img src="{{ asset('images/frame/frame-02.png') }}" /></label>
                     </li>
-                    <li>
+                    <li class="col-6 col-md-4 mx-auto p-0">
                         <input type="radio" name="test" id="cb3" />
-                        <label for="cb3"><img src="https://e-cook-production.s3.ap-southeast-1.amazonaws.com/public/images/profile/1677753538.jpg" /></label>
+                        <label for="cb3"><img src="{{ asset('images/frame/frame-03.png') }}" /></label>
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center mb-5">
-                    <button class="btn build-btn">তৈরী করুন</button>
+                    <button class="btn next-btn">পরবর্তী</button>
                 </div>
             </div>
         </div>
@@ -103,10 +102,7 @@
                         </div>
                     </div>
                     <div class="pb-2 mx-auto">
-                        <button type="button" class="close_btn" data-dismiss="modal" id="modal_close">
-                            বাতিল
-                        </button>
-                        <button type="button" class="crop_btn" id="crop">পরবর্তী</button>
+                        <button type="button" class="btn next-btn" id="crop">পরবর্তী</button>
                     </div>
                 </div>
             </div>
@@ -171,7 +167,7 @@
                     var base64data = reader.result;
                     console.log("Image Cropped!!");
                     bs_modal.modal("hide");
-
+                    document.getElementById("image-preview").classList.remove("profile-image-not-selected");
                     const image = document.createElement("img");
                     image.src = base64data;
                     const imagePreview = document.getElementById("image-preview");

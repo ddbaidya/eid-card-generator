@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <img class="logo m-3 m-md-5" src="{{ asset('images/logo.png') }}" width="60" />
+                <a href="{{ route('home') }}"><img class="logo m-3 m-md-5" src="{{ asset('images/logo.png') }}" width="60" /></a>
             </div>
         </div>
         <div class="row d-md-flex align-items-center" style="margin-top: 10vh">
@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-6 col-sm-12 text-center">
                 <h1 class="fs-35px">নতুন সকাল, নতুন দিন <br>শুভ হোক ঈদের দিন</h1>
-                <button class="btn btn-danger mt-2 get-start">শুভেচ্ছা কার্ড তৈরী করুন</button>
+                <a class="btn btn-danger mt-2 get-start" href="{{ route('card.home') }}">শুভেচ্ছা কার্ড তৈরী করুন</a>
             </div>
         </div>
         <img src="{{ asset('images/star.png') }}" class="star" />
