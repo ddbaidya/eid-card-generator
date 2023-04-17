@@ -318,11 +318,15 @@ body {
 }
 .preview .overly-text {
     position: absolute;
-    top: 119vw;
+    top: 116vw;
     text-align: center;
     left: 6vw;
 }
 .preview .share-btn {
     position: relative;
     top: -15vw;
+}
+.preview .text-greetings-giver{
+    position: relative;
+    bottom: -10vh;
 }

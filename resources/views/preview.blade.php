@@ -31,7 +31,7 @@
             <div class="overly-text w-90">
                 <h3 class="m-0" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->name }}</h3>
                 <h4 class="fs-6" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->designation }}, {{ $card->org }}</h4>
-                <h4 class="mt-5" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
+                <h4 class="text-greetings-giver" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
             </div>
         </div>
         <div class="row">
