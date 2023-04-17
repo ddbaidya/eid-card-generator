@@ -45,6 +45,10 @@
     <script src="{{ asset('assets/custom2.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
     <script>
+        if (screen.width > 768) {
+            alert("Please switch to a mobile device for the best experience.");
+        }
+
         function download() {
             console.log('tigger download');
             // Get the div element
