@@ -25,7 +25,7 @@
         </div>
         <div class="row" id="final-card">
             <div class="col-sm-12 col-md-6">
-                <img src="{{ asset('images/frame/frame-0') }}{{ $card->card }}.png" style="width: 95%; display:block; margin: 5% auto;" />
+                <img src="{{ asset('images/frame/frame-') }}{{ $card->card }}.png" style="width: 95%; display:block; margin: 5% auto;" />
                 <img class="profile-photo" src="{{ $card->profile_photo }}" />
             </div>
             <div class="overly-text w-90">
