@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/cropper.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/custom.css') }}" rel="stylesheet">
 
     <title></title>
@@ -28,7 +29,7 @@
             <div class="col-md-6 col-sm-12">
                 <div class="mb-3 d-flex justify-content-center">
                     <div class="did-floating-label-content">
-                        <input class="d-none" type="file" id="profile_photo" onchange="previewImage()">
+                        <input class="d-none" type="file" id="profile_photo">
                         <label class="rounded-circle p-3 profile-image-border profile-image-not-selected" for="profile_photo" id="image-preview">
                             <img src="{{ asset('images/icon/profile-photo-icon.png') }}" />
                         </label>
@@ -88,10 +89,100 @@
                 </div>
             </div>
         </div>
+
+    </div>
+    <div class="container">
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="img-container">
+                            <div class="row">
+                                <img id="image" src="https://avatars0.githubusercontent.com/u/3456749" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-2 mx-auto">
+                        <button type="button" class="close_btn" data-dismiss="modal" id="modal_close">
+                            বাতিল
+                        </button>
+                        <button type="button" class="crop_btn" id="crop">পরবর্তী</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/cropper.min.js') }}"></script>
     <script src="{{ asset('assets/custom.js') }}"></script>
+    <script>
+        var bs_modal = $("#modal");
+        var image = document.getElementById("image");
+        var cropper, reader, file;
+
+        $("body").on("change", "#profile_photo", function(e) {
+            console.log(90);
+            var files = e.target.files;
+            var done = function(url) {
+                image.src = url;
+                bs_modal.modal("show");
+            };
+
+            if (files && files.length > 0) {
+                file = files[0];
+
+                if (URL) {
+                    done(URL.createObjectURL(file));
+                } else if (FileReader) {
+                    reader = new FileReader();
+                    reader.onload = function(e) {
+                        done(reader.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
+
+        bs_modal
+            .on("shown.bs.modal", function() {
+                cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    viewMode: 3,
+                    preview: ".preview",
+                });
+            })
+            .on("hidden.bs.modal", function() {
+                cropper.destroy();
+                cropper = null;
+            });
+
+        $("#crop").click(function() {
+            canvas = cropper.getCroppedCanvas({
+                width: 400,
+                height: 400,
+            });
+
+            canvas.toBlob(function(blob) {
+                url = URL.createObjectURL(blob);
+                var reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function() {
+                    var base64data = reader.result;
+                    console.log("Image Cropped!!");
+                    bs_modal.modal("hide");
+
+                    const image = document.createElement("img");
+                    image.src = base64data;
+                    const imagePreview = document.getElementById("image-preview");
+                    imagePreview.innerHTML = "";
+                    imagePreview.appendChild(image);
+                    $("#profile_photo").val(base64data);
+                    previewImage();
+                };
+            });
+        });
+    </script>
 </body>
 
 </html>
