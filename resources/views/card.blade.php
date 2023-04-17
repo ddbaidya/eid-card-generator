@@ -27,6 +27,14 @@
         <div class="row mt-5">
             <div class="col-md-6 col-sm-12">
                 <div class="mb-3 d-flex justify-content-center">
+                    <div class="did-floating-label-content">
+                        <input class="d-none" type="file" id="profile_photo" onchange="previewImage()">
+                        <label class="rounded-circle p-3 profile-image-border profile-image-not-selected" for="profile_photo" id="image-preview">
+                            <img src="{{ asset('images/icon/profile-photo-icon.png') }}" />
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3 d-flex justify-content-center">
                     <div class="did-floating-label-content w-75">
                         <input class="did-floating-input" type="text" placeholder=" ">
                         <label class="did-floating-label">নাম </label>
@@ -56,18 +64,10 @@
                         <label class="did-floating-label">ঠিকানা/প্রতিষ্ঠান </label>
                     </div>
                 </div>
-                <div class="mb-3 d-flex justify-content-center">
-                    <div class="did-floating-label-content">
-                        <input class="d-none" type="file" id="profile_photo" onchange="previewImage()">
-                        <label class="border rounded-circle p-3" for="profile_photo" id="image-preview">
-                            <img src="{{ asset('images/icon/profile-photo-icon.png') }}" />
-                        </label>
-                    </div>
-                </div>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div>
-                    <h1 class="text-center select-card-btn d-none">কার্ড নির্বাচন করুন</h1>
+                    <h1 class="text-center select-card-btn">কার্ড নির্বাচন করুন</h1>
                 </div>
                 <ul class="card-list p-0">
                     <li>
@@ -89,6 +89,7 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets/custom.js') }}"></script>
 </body>

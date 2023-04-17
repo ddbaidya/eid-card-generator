@@ -15,7 +15,10 @@ function previewImage() {
 
     if (file) {
         reader.readAsDataURL(file);
+        $("#image-preview").removeClass("profile-image-not-selected");
     } else {
-        imagePreview.innerHTML = "";
+        imagePreview.innerHTML =
+            '<img src="/images/icon/profile-photo-icon.png">';
+        $("#image-preview").addClass("profile-image-not-selected");
     }
 }
