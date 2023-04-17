@@ -16,13 +16,13 @@
     <title>ঈদ মোবারক </title>
 </head>
 
-<body class="preview">
+<body class="preview d-flex align-items-center" style="height: 100vh">
     <div class="container-fluid">
-        <div class="">
-            <img src="{{ asset('images/frame/demo.png') }}" style="width: 95%; display:block; margin: 5% auto;" />
-        </div>
         <div class="row">
-            <div class="col-md-12 d-flex justify-content-around">
+            <div class="col-sm-12 col-md-6">
+                <img src="{{ asset('images/frame/demo.png') }}" style="width: 95%; display:block; margin: 5% auto;" />
+            </div>
+            <div class="col-sm-12 col-md-6 d-flex d-md-block justify-content-around">
                 <button class="btn btn-success d-flex align-items-center"> <img src='{{ asset('images/icon/download-48.png') }}' width="15" class="me-1" /> Download Now</button>
                 <button class="btn btn-primary"><img src='{{ asset('images/icon/fb-48.png') }}' width="15" class="me-1" /> Share On Facebook</button>
             </div>
