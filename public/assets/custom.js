@@ -22,3 +22,29 @@ function previewImage() {
         $("#image-preview").addClass("profile-image-not-selected");
     }
 }
+
+function cardRenderForDownload() {
+    let divElement = document.getElementById("final-card");
+    divElement.style.width = "750px";
+    divElement.style.height = "1050px";
+    document.getElementById("profile_photo_preview").style.top = '240px';
+    document.getElementById("profile_photo_preview").style.left = '206px';
+    document.getElementById("overly-text").style.top = '298px';
+    document.getElementById("input-greetings-giver").style.bottom = '-210px';
+    document.getElementById("input-name").style.fontSize = '38.569px';
+    document.getElementById("input-org").style.fontSize = '32px';
+    document.getElementById("input-greetings-giver").style.fontSize = '29.74px';
+}
+
+function cardRenderNormal() {
+    let divElement = document.getElementById("final-card");
+    divElement.style.width = "334px";
+    divElement.style.height = "467px";
+    document.getElementById("profile_photo_preview").style.top = '107px';
+    document.getElementById("profile_photo_preview").style.left = '92px';
+    document.getElementById("overly-text").style.top = '130px';
+    document.getElementById("input-greetings-giver").style.bottom = '-92px';
+    document.getElementById("input-name").style.fontSize = '17px';
+    document.getElementById("input-org").style.fontSize = '14px';
+    document.getElementById("input-greetings-giver").style.fontSize = '13px';
+}
