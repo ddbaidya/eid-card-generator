@@ -82,15 +82,15 @@
                 <ul class="card-list p-0 row">
                     <li class="col-6 col-md-4 p-0">
                         <input type="radio" name="card" id="cb1" value="1" />
-                        <label for="cb1"><img src="{{ asset('images/frame/frame-1.png') }}" /></label>
+                        <label for="cb1"><img src="{{ asset('images/frame/frame-1.png?v=') }}{{ uniqid() }}" /></label>
                     </li>
                     <li class="col-6 col-md-4 p-0">
                         <input type="radio" name="card" id="cb2" value="2" />
-                        <label for="cb2"><img src="{{ asset('images/frame/frame-2.png') }}" /></label>
+                        <label for="cb2"><img src="{{ asset('images/frame/frame-2.png?v=') }}{{ uniqid() }}" /></label>
                     </li>
                     <li class="col-6 col-md-4 mx-auto p-0">
                         <input type="radio" name="card" id="cb3" value="3" />
-                        <label for="cb3"><img src="{{ asset('images/frame/frame-3.png') }}" /></label>
+                        <label for="cb3"><img src="{{ asset('images/frame/frame-3.png?v') }}{{ uniqid() }}" /></label>
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center mb-5">
