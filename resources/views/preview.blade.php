@@ -68,9 +68,9 @@
                 <div class="frame-canvas" id="final-card">
                     <img class="profile-photo" src="{{ $card->profile_photo }}" />
                     <div class="overly-text w-90">
-                        <h3 class="m-0" style="font-size:17px !important;font-weight:bold;{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-name">{{ $card->name }}</h3>
-                        <h4 class="fs-6" style="font-size:14px !important;{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-org">{{ $card->designation }}, {{ $card->org }}</h4>
-                        <h4 class="text-greetings-giver" style="font-size:13px !important;{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-greetings-giver">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
+                        <h3 class="m-0" style="font-size:17px !important;font-weight:bold;color:#f39b31" id="input-name">{{ $card->name }}</h3>
+                        <h4 class="fs-6" style="font-size:14px !important;" id="input-org">{{ $card->designation }}, {{ $card->org }}</h4>
+                        <h4 class="text-greetings-giver" style="font-size:13px !important;" id="input-greetings-giver">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
                     </div>
                 </div>
             </div>
@@ -110,6 +110,7 @@
             //including the useCORS option
             const config = {
                 useCORS: true,
+                scale: 10,
                 // Add any other options you need here
             };
             // Use html2canvas to create a canvas element from the div element
