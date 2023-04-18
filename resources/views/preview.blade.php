@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('assets/custom3.css') }}" rel="stylesheet">
@@ -29,9 +31,9 @@
                 <img class="profile-photo" src="{{ $card->profile_photo }}" />
             </div>
             <div class="overly-text w-90">
-                <h3 class="m-0" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->name }}</h3>
-                <h4 class="fs-6" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->designation }}, {{ $card->org }}</h4>
-                <h4 class="text-greetings-giver" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
+                <h3 class="m-0" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-name">{{ $card->name }}</h3>
+                <h4 class="fs-6" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-org">{{ $card->designation }}, {{ $card->org }}</h4>
+                <h4 class="text-greetings-giver" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-greetings-giver">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
             </div>
         </div>
         <div class="row">
@@ -44,6 +46,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('assets/custom3.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+    <script>
+        function fontDetectedAndChange(element) {
+            var userInput = document.getElementById(element).textContent; // get the user input text
+            var script = /[^\u0000-\u007F]/.test(userInput) ? 'Bengali' : 'English'; // detect the script of the user input
+            console.log(script);
+            var font = script === 'Bengali' ? 'Hind Siliguri' : 'Lato'; // set the appropriate font family based on the script
+            document.getElementById(element).style.fontFamily = font; // apply the font family to the h1 element
+        }
+        fontDetectedAndChange("input-name");
+        fontDetectedAndChange("input-org");
+        fontDetectedAndChange("input-greetings-giver");
+    </script>
     <script>
         if (screen.width > 768) {
             alert("Please switch to a mobile device for the best experience.");
