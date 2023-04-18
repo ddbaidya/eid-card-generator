@@ -111,7 +111,6 @@
             //including the useCORS option
             const config = {
                 useCORS: true,
-                scale: 5,
                 // Add any other options you need here
             };
             // Use html2canvas to create a canvas element from the div element
