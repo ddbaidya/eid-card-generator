@@ -16,27 +16,64 @@
     <link href="{{ asset('assets/custom3.css') }}" rel="stylesheet">
 
     <title>ঈদ মোবারক </title>
+    <style>
+        .frame-canvas {
+            width: 334px;
+            height: 467px;
+            background: url('{{ asset('images/frame/frame-') }}{{ $card->card }}.png');
+            background-size: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .preview .profile-photo {
+            position: relative;
+            width: 45%;
+            border-radius: 50%;
+            top: 107px;
+            left: 92px;
+        }
+
+        .preview .overly-text {
+            position: relative;
+            top: 130px;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .preview .text-greetings-giver {
+            position: relative;
+            bottom: -90px;
+        }
+    </style>
 </head>
 
 <body class="preview d-flex mt-5" style="height: 100vh">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <a href="{{ route('home') }}"><img class="logo m-3 m-md-5 m-auto d-block mb-3" src="{{ asset('images/logo.png') }}" width="60" /></a>
+                <a href="{{ route('home') }}"><img class="logo m-3 m-md-5 m-auto d-none mb-3" src="{{ asset('images/logo.png') }}" width="60" /></a>
+                <div class="mt-3 mb-2">
+                    <h1 class="text-center select-card-btn">প্রিভিউ</h1>
+                </div>
             </div>
         </div>
-        <div class="row" id="final-card">
-            <div class="col-sm-12 col-md-6">
-                <img src="{{ asset('images/frame/frame-') }}{{ $card->card }}.png" style="width: 95%; display:block; margin: 5% auto;" />
-                <img class="profile-photo" src="{{ $card->profile_photo }}" />
-            </div>
-            <div class="overly-text w-90">
-                <h3 class="m-0" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-name">{{ $card->name }}</h3>
-                <h4 class="fs-6" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-org">{{ $card->designation }}, {{ $card->org }}</h4>
-                <h4 class="text-greetings-giver" style="{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-greetings-giver">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
-            </div>
-        </div>
+
         <div class="row">
+            <div class="col-12">
+                <div class="frame-canvas" id="final-card">
+                    <img class="profile-photo" src="{{ $card->profile_photo }}" />
+                    <div class="overly-text w-90">
+                        <h3 class="m-0" style="font-size:16px !important;{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-name">{{ $card->name }}</h3>
+                        <h4 class="fs-6" style="font-size:13px !important;{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-org">{{ $card->designation }}, {{ $card->org }}</h4>
+                        <h4 class="text-greetings-giver" style="font-size:13px !important;{{ $card->card == 1 ? '' : 'color:#f39b31' }}" id="input-greetings-giver">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" style="">
             <div class="col-sm-12 col-md-6 d-flex d-md-block justify-content-around share-btn">
                 <button class="btn btn-success d-flex align-items-center" onclick="download()"> <img src='{{ asset('images/icon/download-48.png') }}' width="15" class="me-1" /> Download Now</button>
                 <button class="btn btn-primary" onclick="shareOnFacebook()"><img src='{{ asset('images/icon/fb-48.png') }}' width="15" class="me-1" /> Share On Facebook</button>

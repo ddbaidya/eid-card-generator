@@ -13,16 +13,20 @@ body {
 .fs-35px {
     font-size: 35px !important;
 }
+
 .w-33 {
     width: 33.3333%;
 }
+
 .home {
     background: url("/images/bg-01.png");
     background-size: cover;
 }
+
 .w-90 {
     width: 90%;
 }
+
 .home .star {
     position: absolute;
     top: -15vh;
@@ -70,8 +74,7 @@ body {
     font-weight: bolder;
     font-size: 25px;
     border-radius: 50px;
-    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
-        infinite alternate;
+    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
     position: relative;
 }
 
@@ -81,16 +84,8 @@ body {
     inset: 0;
     border-radius: 50px;
     padding: 3px;
-    background: linear-gradient(
-        to right,
-        #d9b34b,
-        #846c2c,
-        #d9b34b,
-        #846c2c,
-        #d9b34b
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(to right, #d9b34b, #846c2c, #d9b34b, #846c2c, #d9b34b);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 }
@@ -136,12 +131,12 @@ body {
     outline: none;
 }
 
-.did-floating-input:focus ~ .did-floating-label {
+.did-floating-input:focus~.did-floating-label {
     top: -8px;
     font-size: 13px;
 }
 
-.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+.did-floating-input:not(:placeholder-shown)~.did-floating-label {
     top: -8px;
     font-size: 13px;
 }
@@ -192,17 +187,17 @@ body {
     transform-origin: 50% 50%;
 }
 
-.card-page .card-list :checked + label {
+.card-page .card-list :checked+label {
     border-color: #ddd;
 }
 
-.card-page .card-list :checked + label:before {
+.card-page .card-list :checked+label:before {
     content: "✓";
     background-color: grey;
     transform: scale(1);
 }
 
-.card-page .card-list :checked + label img {
+.card-page .card-list :checked+label img {
     transform: scale(0.9);
     box-shadow: 0 0 5px #333;
     z-index: -1;
@@ -229,8 +224,7 @@ body {
     font-weight: bolder;
     font-size: 25px;
     border-radius: 50px;
-    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
-        infinite alternate;
+    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
     color: white;
     position: relative;
 }
@@ -241,16 +235,8 @@ body {
     inset: 0;
     border-radius: 50px;
     padding: 3px;
-    background: linear-gradient(
-        to right,
-        #d9b34b,
-        #846c2c,
-        #d9b34b,
-        #846c2c,
-        #d9b34b
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(to right, #d9b34b, #846c2c, #d9b34b, #846c2c, #d9b34b);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 }
@@ -271,9 +257,9 @@ body {
 }
 
 .profile-image-not-selected {
-    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
-        infinite alternate;
+    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
 }
+
 .next-btn,
 .next-btn:focus,
 .next-btn:active {
@@ -284,49 +270,19 @@ body {
     font-weight: bolder;
     font-size: 25px;
     border-radius: 50px;
-    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
-        infinite alternate;
+    animation: bop 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
     color: white;
     position: relative;
 }
+
 .next-btn::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 50px;
     padding: 3px;
-    background: linear-gradient(
-        to right,
-        #d9b34b,
-        #846c2c,
-        #d9b34b,
-        #846c2c,
-        #d9b34b
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(to right, #d9b34b, #846c2c, #d9b34b, #846c2c, #d9b34b);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-}
-
-.preview .profile-photo {
-    position: relative;
-    top: -58%;
-    left: 28%;
-    width: 44%;
-    border-radius: 50%;
-}
-.preview .overly-text {
-    position: absolute;
-    top: 116vw;
-    text-align: center;
-    left: 6vw;
-}
-.preview .share-btn {
-    position: relative;
-    top: -15vw;
-}
-.preview .text-greetings-giver{
-    position: relative;
-    bottom: -25vw;
 }
