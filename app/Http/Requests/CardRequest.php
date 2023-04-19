@@ -24,10 +24,7 @@ class CardRequest extends FormRequest
         return [
             'profile_photo' => 'required',
             'name' => 'required|string',
-            'designation' => 'required|string',
-            'org' => 'required|string',
             'greetings_giver' => 'required|string',
-            'greetings_giver_org' => 'required|string',
             'card' => 'required'
         ];
     }

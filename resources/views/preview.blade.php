@@ -69,8 +69,8 @@
                     <img class="profile-photo" src="{{ $card->profile_photo }}" id="profile_photo_preview"/>
                     <div class="overly-text w-90" id="overly-text">
                         <h3 class="m-0" style="font-size:17px !important;font-weight:bold;color:#f39b31" id="input-name">{{ $card->name }}</h3>
-                        <h4 class="" style="font-size:14px !important;" id="input-org">{{ $card->designation }}, {{ $card->org }}</h4>
-                        <h4 class="text-greetings-giver" style="font-size:13px !important;" id="input-greetings-giver">{{ $card->greetings_giver }}, {{ $card->greetings_giver_org }}</h4>
+                        <h4 class="" style="font-size:14px !important;" id="input-org">{{ $card->designation }} {{ ($card->org) ? ',' : '' }} {{ $card->org }}&nbsp</h4>
+                        <h4 class="text-greetings-giver" style="font-size:13px !important;" id="input-greetings-giver">{{ $card->greetings_giver }} {{ ($card->greetings_giver_org) ? ',' : '' }} {{ $card->greetings_giver_org }}</h4>
                     </div>
                 </div>
             </div>
